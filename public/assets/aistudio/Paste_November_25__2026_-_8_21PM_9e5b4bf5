@@ -1,0 +1,1048 @@
+# PROJECT: PERSONAL AGENTIC AI & RAG LEARNING PLATFORM
+
+## 1. YOUR ROLE
+
+Act as a senior full-stack developer, software architect, technical educator, and learning-experience designer.
+
+I want you to BUILD a fully functional personal educational website that will serve as my long-term learning platform for:
+
+**Production Agentic AI & Retrieval-Augmented Generation (RAG).**
+
+Use https://www.deep-ml.com/ as inspiration for the learning experience and information architecture.
+
+Do not simply describe what you would build. Actually implement the website.
+
+This is a long-term project. The initial version should establish a strong foundation, with a properly structured curriculum, topic pages, resources, and persistent progress tracking.
+
+Do not waste time implementing a question bank, coding challenge engine, or elaborate AI tutor at this stage.
+
+---
+
+## 2. MY TECHNICAL BACKGROUND
+
+The learning content must be personalized to this background.
+
+### What I already know
+
+- Basic Machine Learning.
+- Python.
+- C.
+- C++.
+- Data Structures and Algorithms.
+- Design and Analysis of Algorithms.
+
+### What I understand
+
+- I have a general understanding of what Agentic AI is.
+- I understand that AI agents can use tools, perform tasks, and make decisions.
+
+### What I don't know
+
+- I have practically zero knowledge of RAG.
+- I have not studied vector databases in depth.
+- I have not built production LLM applications.
+- I have not studied agent orchestration frameworks in depth.
+- I do not have practical experience with production AI architecture, LLM evaluation, or deployment.
+
+### Teaching requirements
+
+Do not treat me as someone who has never programmed.
+
+However, do not assume I know terminology related to LLM engineering.
+
+Explain unfamiliar concepts from their foundations.
+
+For every topic:
+
+1. Explain what it is.
+2. Explain why it exists.
+3. Explain the problem it solves.
+4. Explain how it works at a conceptual level.
+5. Explain where it is used in actual systems.
+6. Explain what I should be able to implement or understand after studying it.
+7. Provide reliable learning resources.
+
+Prioritize understanding the engineering principles behind a technology instead of memorizing framework-specific APIs.
+
+I want to understand what is happening under the hood.
+
+---
+
+## 3. PRIMARY OBJECTIVE
+
+The website must provide a structured, sequential roadmap from my current knowledge to the ability to independently design, implement, evaluate, and deploy production-grade Agentic AI and RAG applications.
+
+The roadmap should cover:
+
+- LLM application foundations.
+- Embeddings and semantic search.
+- RAG architecture.
+- Document ingestion and processing.
+- Retrieval optimization.
+- Vector databases.
+- RAG evaluation.
+- Agent architecture.
+- Tool calling and orchestration.
+- Agentic RAG.
+- Memory and state management.
+- Security and reliability.
+- Monitoring and observability.
+- Deployment and production engineering.
+
+The most important principle:
+
+**Teach the fundamentals first. Introduce tools and frameworks only when I understand the underlying concept they implement.**
+
+Do not make the roadmap dependent on a single framework or cloud provider.
+
+---
+
+# 4. CURRICULUM STRUCTURE
+
+Create an ordered learning path with the following phases.
+
+Each phase must contain individual topics, and every topic must have its own detailed learning page.
+
+Do not combine everything into one long article.
+
+## PHASE 00 — Orientation and Foundations
+
+Objective: Understand the landscape of modern LLM applications.
+
+Topics:
+
+- Traditional Machine Learning vs Generative AI.
+- What is an LLM?
+- How LLM inference works at a high level.
+- Tokens and tokenization.
+- Context windows.
+- Prompt engineering fundamentals.
+- Model APIs and inference.
+- Embeddings: what they are and why they matter.
+- Generation models vs embedding models.
+- What is an LLM application?
+- What makes an AI application production-grade?
+
+Explain how building an LLM application differs from training an ML model.
+
+The goal is to understand the new engineering environment before starting RAG.
+
+## PHASE 01 — LLM Application Engineering
+
+Objective: Learn to build applications that communicate with LLMs.
+
+Topics:
+
+- Working with LLM APIs.
+- API authentication and environment variables.
+- Request and response structures.
+- System, user, and assistant messages.
+- Prompt templates.
+- Temperature and generation parameters.
+- Structured outputs.
+- JSON schemas.
+- Function calling and tool calling.
+- Streaming responses.
+- Token usage and cost.
+- Context management.
+- Rate limits.
+- Error handling and retries.
+- Model selection and trade-offs.
+
+Include practical exposure to the Gemini API because I am using Google AI Studio.
+
+However, explain concepts in a provider-independent way.
+
+Official starting resource:
+https://ai.google.dev/gemini-api/docs/get-started
+
+Function calling:
+https://ai.google.dev/gemini-api/docs/function-calling
+
+## PHASE 02 — Python Backend and Production Foundations
+
+Objective: Learn the necessary software engineering concepts to turn AI prototypes into usable applications.
+
+I already know Python basics, so do not waste this phase teaching basic syntax.
+
+Topics:
+
+- Python project architecture.
+- Virtual environments and dependency management.
+- Type hints.
+- Pydantic and data validation.
+- HTTP and REST APIs.
+- FastAPI.
+- Asynchronous programming.
+- Async/await.
+- Request validation.
+- Database fundamentals.
+- SQL and PostgreSQL fundamentals.
+- Logging and exception handling.
+- Unit and integration testing.
+- Pytest.
+- Git and version control.
+- Environment configuration and secrets.
+- Docker and containers.
+- Basic application deployment.
+
+Suggested resources:
+
+FastAPI:
+https://fastapi.tiangolo.com/tutorial/
+
+Docker:
+https://docs.docker.com/learn/paths/get-started-with-docker-containers/
+
+Do not turn this into a complete backend development course. Focus on the knowledge required to build and maintain AI applications.
+
+## PHASE 03 — RAG FUNDAMENTALS
+
+Objective: Understand RAG from zero and implement a basic RAG application.
+
+This is a particularly important phase because I am unfamiliar with RAG.
+
+Topics:
+
+- What is Retrieval-Augmented Generation?
+- Why do LLMs need external knowledge?
+- Parametric knowledge vs external knowledge.
+- Why prompting alone is insufficient for some applications.
+- The RAG architecture.
+- Document ingestion.
+- Document processing.
+- Text chunking.
+- Embedding generation.
+- Vector representations.
+- Similarity measures.
+- Cosine similarity.
+- Vector search.
+- Retrieving relevant documents.
+- Augmenting prompts with retrieved context.
+- Generating grounded responses.
+- Source attribution and citations.
+- Handling questions that cannot be answered from retrieved information.
+
+Explain the complete pipeline:
+
+DOCUMENTS → PROCESSING → CHUNKING → EMBEDDINGS → VECTOR DATABASE → RETRIEVAL → CONTEXT AUGMENTATION → LLM → ANSWER
+
+Provide a visual representation of this process.
+
+Important distinctions to teach:
+
+- RAG is not fine-tuning.
+- Embeddings are not generated answers.
+- A vector database is not the entirety of a RAG system.
+- Retrieval quality directly influences answer quality.
+
+Primary resources:
+
+Original RAG research paper:
+https://arxiv.org/abs/2005.11401
+
+Microsoft RAG architecture guide:
+https://learn.microsoft.com/en-us/azure/foundry/concepts/retrieval-augmented-generation
+
+Pinecone RAG guide:
+https://www.pinecone.io/learn/retrieval-augmented-generation/
+
+Milestone: Implement a simple RAG pipeline over a small collection of documents.
+
+## PHASE 04 — DOCUMENT PROCESSING AND INGESTION
+
+Objective: Learn how real-world data is transformed into a searchable knowledge base.
+
+Topics:
+
+- Document loaders.
+- PDF processing.
+- HTML and Markdown processing.
+- Text extraction.
+- Data cleaning and normalization.
+- Document metadata.
+- Chunking strategies.
+- Fixed-size chunking.
+- Recursive chunking.
+- Structure-aware chunking.
+- Semantic chunking.
+- Chunk overlap.
+- Parent-child retrieval.
+- Document identifiers.
+- Duplicate detection.
+- Document versioning.
+- Incremental ingestion.
+- Updating and deleting documents.
+- Managing document permissions.
+- Handling tables and complex documents.
+
+For each technique, explain the advantages, disadvantages, and situations where it is appropriate.
+
+Milestone: Build an ingestion pipeline that can process a collection of documents and maintain their metadata.
+
+## PHASE 05 — RETRIEVAL SYSTEMS AND OPTIMIZATION
+
+Objective: Move beyond basic vector search and learn how to improve retrieval quality.
+
+Topics:
+
+- Information retrieval fundamentals.
+- Lexical search.
+- Inverted indexes.
+- TF-IDF.
+- BM25.
+- Dense retrieval.
+- Sparse retrieval.
+- Semantic search.
+- Hybrid retrieval.
+- Reciprocal Rank Fusion.
+- Metadata filtering.
+- Top-k retrieval.
+- Query rewriting.
+- Query expansion.
+- Multi-query retrieval.
+- Query decomposition.
+- Reranking.
+- Cross-encoders.
+- Context compression.
+- Retrieval precision and recall.
+- Retrieval latency and optimization.
+
+Explain why semantic search alone is not always enough.
+
+Explain when hybrid retrieval is useful and why reranking can improve results.
+
+Resources:
+
+Qdrant hybrid retrieval:
+https://qdrant.tech/documentation/hybrid-queries/
+
+Pinecone reranking:
+https://www.pinecone.io/learn/series/rag/rerankers/
+
+Milestone: Build a retrieval system with both semantic and lexical retrieval, and compare its performance against basic vector search.
+
+## PHASE 06 — VECTOR DATABASES
+
+Objective: Understand vector databases beyond simply using their Python libraries.
+
+Topics:
+
+- What is a vector database?
+- Vector indexing.
+- Approximate Nearest Neighbour search.
+- Exact vs approximate search.
+- HNSW.
+- Distance metrics.
+- Collections and records.
+- Payloads and metadata.
+- Filtering.
+- Indexing.
+- Storage and memory.
+- Persistence.
+- Scalability.
+- Multitenancy.
+- Database security.
+- Vector database performance.
+
+Use Qdrant as the first practical implementation.
+
+However, explain general vector database concepts independently of Qdrant.
+
+Resources:
+
+https://qdrant.tech/documentation/
+
+Include optional comparisons with pgvector and other vector database approaches.
+
+Milestone: Create, populate, query, filter, and persist a vector collection.
+
+## PHASE 07 — RAG EVALUATION AND QUALITY
+
+Objective: Learn how to determine whether a RAG system actually works.
+
+This phase must not be skipped.
+
+Topics:
+
+- Why evaluating LLM applications is difficult.
+- Ground-truth datasets.
+- Creating evaluation datasets.
+- Retrieval evaluation.
+- Precision@k.
+- Recall@k.
+- Mean Reciprocal Rank.
+- nDCG.
+- Context precision.
+- Context recall.
+- Answer relevance.
+- Faithfulness.
+- Groundedness.
+- Hallucination detection.
+- Human evaluation.
+- Automated evaluation.
+- Regression testing.
+- Comparing retrieval configurations.
+- Evaluating RAG improvements.
+
+Introduce Ragas as an evaluation tool, but explain the meaning and limitations of the metrics independently.
+
+Resources:
+
+https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/
+
+https://docs.ragas.io/en/latest/getstarted/rag_eval/
+
+Milestone: Build a small evaluation dataset and systematically compare different RAG configurations.
+
+## PHASE 08 — AGENTIC AI FUNDAMENTALS
+
+Objective: Understand how an AI application becomes an agentic system.
+
+Topics:
+
+- What is an AI agent?
+- Workflows vs agents.
+- LLMs as reasoning engines.
+- The agent execution loop.
+- Tool selection.
+- Function calling.
+- Tool interfaces.
+- Tool schemas.
+- Tool execution.
+- Observations and feedback.
+- Agent state.
+- Short-term memory.
+- Long-term memory.
+- Planning.
+- Task decomposition.
+- Replanning.
+- Conditional execution.
+- Stop conditions.
+- Error recovery.
+- Human-in-the-loop systems.
+
+Explain the architecture of an agent:
+
+USER INPUT → MODEL → TOOL SELECTION → TOOL EXECUTION → OBSERVATION → NEXT DECISION → FINAL RESPONSE
+
+Explain the difference between:
+
+- A normal LLM call.
+- An LLM application with tools.
+- A deterministic workflow.
+- An autonomous agent.
+- A multi-agent system.
+
+Do not assume that using multiple agents automatically produces a better application.
+
+Resources:
+
+OpenAI agent engineering guide:
+https://developers.openai.com/tracks/building-agents
+
+Anthropic:
+https://www.anthropic.com/research/building-effective-agents
+
+Gemini function calling:
+https://ai.google.dev/gemini-api/docs/function-calling
+
+## PHASE 09 — AGENT ORCHESTRATION AND ARCHITECTURE
+
+Objective: Learn how complex agentic systems are structured and controlled.
+
+Topics:
+
+- Agent orchestration.
+- Single-agent architectures.
+- Multi-agent architectures.
+- Sequential workflows.
+- Routing.
+- Parallel execution.
+- Planner-executor patterns.
+- Supervisor architectures.
+- Agent handoffs.
+- Shared state.
+- Memory management.
+- Persistent execution.
+- Checkpointing.
+- Human approval.
+- Interruptions and resumption.
+- Failure recovery.
+- Tool permissions.
+- Model and tool selection.
+- Context engineering.
+- Model Context Protocol (MCP).
+
+Introduce frameworks only after teaching their underlying concepts.
+
+Suggested frameworks to investigate:
+
+- LangGraph.
+- Google Agent Development Kit.
+- OpenAI Agents SDK.
+
+Resources:
+
+https://docs.langchain.com/oss/python/learn
+
+https://openai.github.io/openai-agents-python/
+
+https://modelcontextprotocol.io/introduction
+
+Explain what each framework provides, what problems it solves, and when using it is justified.
+
+Milestone: Implement a stateful agent with multiple tools, controlled execution, and persistent state.
+
+## PHASE 10 — AGENTIC RAG
+
+Objective: Combine retrieval systems and agents.
+
+Topics:
+
+- Traditional RAG vs Agentic RAG.
+- Agent-driven retrieval.
+- Retrieval as an agent tool.
+- Choosing retrieval strategies dynamically.
+- Adaptive retrieval.
+- Iterative retrieval.
+- Query planning.
+- Query decomposition.
+- Multi-source retrieval.
+- Search agents.
+- SQL agents.
+- Knowledge base agents.
+- Tool selection.
+- Retrieval validation.
+- Multi-step reasoning using retrieved information.
+- Combining external tools with RAG.
+- Citation and provenance management.
+
+Explain when a traditional RAG pipeline is sufficient and when agentic retrieval provides an actual advantage.
+
+Milestone: Build an agent that can select appropriate retrieval tools, retrieve information, and provide grounded answers.
+
+## PHASE 11 — SECURITY, PRIVACY AND GOVERNANCE
+
+Objective: Understand the security requirements of production AI applications.
+
+Topics:
+
+- Prompt injection.
+- Indirect prompt injection.
+- Untrusted retrieved documents.
+- Tool abuse.
+- Unsafe tool execution.
+- Data leakage.
+- Secrets management.
+- Authentication.
+- Authorization.
+- Role-based access control.
+- Document-level permissions.
+- Multitenancy.
+- PII protection.
+- Input validation.
+- Output validation.
+- Sandboxing.
+- Audit trails.
+- Human approval for sensitive actions.
+- Security testing.
+
+Resource:
+
+OWASP RAG Security Cheat Sheet:
+https://cheatsheetseries.owasp.org/cheatsheets/RAG_Security_Cheat_Sheet.html
+
+This phase must focus on real threats and practical defenses, not just definitions.
+
+## PHASE 12 — PRODUCTION ENGINEERING AND DEPLOYMENT
+
+Objective: Understand how to operate AI systems reliably in actual environments.
+
+Topics:
+
+- Production architecture.
+- Application deployment.
+- API architecture.
+- Docker deployment.
+- Cloud infrastructure fundamentals.
+- CI/CD fundamentals.
+- Logging.
+- Metrics.
+- Distributed tracing.
+- LLM observability.
+- Agent execution traces.
+- Token and API cost monitoring.
+- Latency optimization.
+- P50 and P95 latency.
+- Caching.
+- Rate limiting.
+- Concurrency.
+- Retry strategies.
+- Timeouts.
+- Circuit breakers.
+- Fault tolerance.
+- Fallback strategies.
+- Model versioning.
+- Monitoring retrieval quality.
+- Data freshness.
+- Evaluation in CI/CD.
+- Continuous improvement.
+- Scaling considerations.
+
+Explain the difference between a prototype that works and a production system that can be trusted.
+
+Resource:
+
+https://opentelemetry.io/docs/what-is-opentelemetry/
+
+Milestone: Containerize and deploy an application with monitoring, error handling, and appropriate operational safeguards.
+
+## PHASE 13 — CAPSTONE PROJECT
+
+Create a final learning project that combines the previous phases.
+
+Project concept:
+
+**Production-Grade Agentic Knowledge Assistant**
+
+The application should eventually be able to:
+
+- Ingest and process multiple document formats.
+- Maintain a searchable knowledge base.
+- Perform hybrid retrieval.
+- Use reranking.
+- Generate grounded answers.
+- Provide source citations.
+- Evaluate retrieval and generation quality.
+- Use agents to select tools and perform multi-step tasks.
+- Maintain state across interactions.
+- Enforce permissions.
+- Handle failures.
+- Track execution through logs and traces.
+- Monitor performance, cost, and latency.
+- Be deployed as a functioning application.
+
+Divide this project into small milestones.
+
+Do not force a particular technology or cloud provider into the capstone prematurely.
+
+---
+
+# 5. TOPIC PAGE DESIGN
+
+This is one of the most important requirements.
+
+Every topic must have an individual learning page.
+
+The page should follow this structure:
+
+### A. Overview
+
+- Topic name.
+- Phase.
+- Difficulty.
+- Estimated effort (only provide a sensible estimate).
+- Prerequisite topics.
+- Current progress status.
+
+### B. What is it?
+
+Explain the concept in 2–4 clear paragraphs.
+
+Assume I am unfamiliar with its terminology.
+
+### C. Why does it exist?
+
+Explain the problem that motivated the technique.
+
+Why was it necessary?
+
+What limitations of earlier approaches does it address?
+
+### D. How does it work?
+
+Explain the underlying mechanism.
+
+Use simple examples, diagrams, flowcharts, equations, or architecture visualizations where appropriate.
+
+Avoid unnecessarily complicated explanations.
+
+### E. Practical relevance
+
+Explain where this concept is used in actual AI systems.
+
+Give realistic engineering examples.
+
+### F. What should I learn?
+
+List the specific knowledge and skills I must acquire.
+
+### G. Learning resources
+
+Provide:
+
+- Official documentation.
+- Research papers when relevant.
+- High-quality tutorials.
+- Practical implementation guides.
+
+Every resource must include:
+
+- Resource name.
+- Clickable URL.
+- Resource type.
+- Why it is worth studying.
+- Suggested reading priority.
+
+Prioritize official documentation and original research where appropriate.
+
+Do not fabricate resource names, links, authors, or documentation.
+
+Do not provide an enormous list of resources. Select the most relevant ones.
+
+### H. Completion checklist
+
+Give me a checklist that allows me to track whether I have actually learned the topic.
+
+Use these default criteria where applicable:
+
+- [ ] Understand the concept.
+- [ ] Study the recommended resource.
+- [ ] Explain the concept without referring to notes.
+- [ ] Understand its practical applications.
+- [ ] Implement a small example, where applicable.
+
+A topic should not be considered mastered merely because I opened its documentation.
+
+### I. My Notes
+
+Provide a dedicated notes section.
+
+Allow me to save:
+- Personal explanations.
+- Important observations.
+- Difficult concepts.
+- Questions to investigate later.
+
+---
+
+# 6. WEBSITE FEATURES
+
+Implement the following features.
+
+## A. Main Dashboard
+
+The homepage should show:
+
+- Overall curriculum completion.
+- Completed topics.
+- Topics currently in progress.
+- Total remaining topics.
+- Current learning phase.
+- Continue learning button.
+- Recommended next topic.
+- Recent activity.
+- Capstone progress.
+
+Progress must be calculated from actual user activity.
+
+Do not use fabricated statistics.
+
+## B. Learning Path
+
+Display all phases in a clean, ordered manner.
+
+Each phase should have:
+
+- Phase number.
+- Phase title.
+- Short description.
+- Number of topics.
+- Completion percentage.
+- Progress indicator.
+- Expandable topic list.
+
+Each topic should have a visual status:
+
+- Not started.
+- In progress.
+- Completed.
+
+Allow navigation directly to any topic.
+
+## C. Search and Filtering
+
+Allow searching by:
+
+- Topic.
+- Keyword.
+- Phase.
+- Technology.
+- Learning status.
+
+## D. Progress Tracking
+
+The most important feature.
+
+I must be able to check off topics and individual completion tasks.
+
+Persist the progress automatically.
+
+Refreshing or reopening the website must not erase my progress.
+
+Use browser-based persistent storage for the initial implementation.
+
+## E. Bookmarks
+
+Allow me to bookmark topics and resources.
+
+Create a separate saved-items section.
+
+## F. Personal Learning Notes
+
+I want to write my own explanations of the topics.
+
+Allow saving and editing notes independently for each topic.
+
+## G. Glossary
+
+Create a searchable technical glossary.
+
+Initially populate it with important terms such as:
+
+- LLM
+- Token
+- Context window
+- Embedding
+- Vector
+- Cosine similarity
+- Chunking
+- Retrieval
+- BM25
+- Reranking
+- Hybrid search
+- Vector database
+- RAG
+- Tool calling
+- Agent loop
+- Orchestration
+- State
+- Memory
+- Checkpoint
+- MCP
+- Hallucination
+- Groundedness
+- Observability
+- Prompt injection
+
+Each entry should have a brief, beginner-friendly definition and links to related topics.
+
+Expand this glossary as the curriculum grows.
+
+## H. Learning Activity
+
+Provide a simple activity section showing:
+
+- Recently completed topics.
+- Recently updated notes.
+- Recently studied phases.
+
+No elaborate gamification is necessary.
+
+## I. Export and Backup
+
+This is mandatory.
+
+Provide functionality to:
+
+- Export all progress and notes to JSON.
+- Import an existing backup.
+- Restore progress after importing.
+
+Use a versioned export format and validate imported data before replacing saved information.
+
+---
+
+# 7. USER EXPERIENCE AND VISUAL DESIGN
+
+I want a clean, modern, technically oriented learning website.
+
+Use Deep-ML as inspiration, not as an exact clone.
+
+Design requirements:
+
+- Excellent typography.
+- Clear information hierarchy.
+- Minimal visual clutter.
+- Dark mode as the initial theme.
+- Light mode as an alternative.
+- Responsive layout.
+- Sidebar navigation on desktop.
+- Mobile-friendly navigation.
+- Smooth but restrained interactions.
+- Readable topic pages.
+- Well-designed progress indicators.
+- Consistent spacing.
+- Accessible color contrast.
+- Good empty states.
+
+Avoid:
+
+- Excessive gradients.
+- Unnecessary animations.
+- Overly colorful dashboards.
+- Excessive card layouts.
+- Fake charts.
+- Decorative elements that reduce readability.
+
+The website should feel like a professional technical learning environment rather than a generic online course platform.
+
+Use architecture diagrams and simple interactive visualizations when they genuinely improve understanding.
+
+---
+
+# 8. TECHNICAL REQUIREMENTS
+
+First inspect the existing project and its technology stack.
+
+Preserve working code and existing project conventions.
+
+If starting from an empty project, use a sensible modern frontend stack such as React, TypeScript, and Tailwind CSS.
+
+Requirements:
+
+- Reusable components.
+- Data-driven curriculum.
+- Clean folder structure.
+- Separate curriculum data from UI components.
+- Strong typing.
+- Consistent state management.
+- Persistent browser storage.
+- Functional navigation.
+- Error handling.
+- Responsive design.
+
+Represent the curriculum using structured data rather than hardcoding every topic directly into individual components.
+
+For example, each topic should have a consistent data structure containing:
+
+- ID.
+- Title.
+- Description.
+- Phase.
+- Prerequisites.
+- Difficulty.
+- Learning content.
+- Resources.
+- Completion criteria.
+- Related topics.
+
+Make it easy to add new phases and topics later without rewriting the application.
+
+Do not implement a backend, authentication, or database server unnecessarily.
+
+Do not expose API keys or introduce an LLM API dependency just to operate the learning website.
+
+The curriculum and progress tracking must work independently of external AI services.
+
+If browser storage is used, clearly understand that it is local to the browser. Provide backup and restore functionality.
+
+---
+
+# 9. CONTENT QUALITY REQUIREMENTS
+
+The educational content is as important as the appearance of the website.
+
+Follow these principles:
+
+1. Never assume I know RAG terminology.
+2. Never introduce a complicated concept without explaining its prerequisites.
+3. Explain concepts before introducing the libraries that implement them.
+4. Distinguish fundamental engineering knowledge from optional frameworks.
+5. Do not teach obsolete approaches as current best practices.
+6. Use current official documentation wherever possible.
+7. Clearly identify optional or advanced topics.
+8. Give each topic a specific learning objective.
+9. Avoid duplicating topics across phases.
+10. Make the roadmap sequential, but allow browsing ahead.
+11. Keep explanations concise enough to function as learning notes, not entire textbooks.
+12. Use examples that gradually build toward the capstone project.
+
+For topics involving rapidly changing tools, distinguish stable underlying principles from version-specific implementation details.
+
+Do not invent sources or claim that a technology is production-ready without justification.
+
+---
+
+# 10. SCOPE MANAGEMENT
+
+This is the FIRST VERSION of a long-term platform.
+
+Build the following now:
+
+1. Fully functional dashboard.
+2. Complete initial curriculum with all phases and topics.
+3. Individual topic pages.
+4. Brief conceptual explanations for every topic.
+5. Curated source links.
+6. Completion checklists.
+7. Persistent progress tracking.
+8. Personal notes.
+9. Bookmarks.
+10. Search and glossary.
+11. Export and import.
+12. Capstone roadmap.
+
+Do NOT build these yet:
+
+- Hundreds of coding questions.
+- An online code execution environment.
+- An elaborate quiz engine.
+- An AI chatbot.
+- User authentication.
+- Cloud synchronization.
+- Complex social features.
+- Leaderboards.
+
+Structure the application so these can be added in future versions without major architectural changes.
+
+---
+
+# 11. ACCEPTANCE CRITERIA
+
+Before considering the implementation complete, verify:
+
+- Every phase appears on the learning path.
+- Every phase has its individual topics.
+- Every topic opens its own page.
+- Every topic contains an understandable explanation.
+- Every topic has relevant learning resources.
+- External resource links work.
+- Checklist interactions work.
+- Progress calculations are correct.
+- Notes save and remain after refresh.
+- Bookmarks work.
+- Search returns relevant topics.
+- The glossary is navigable.
+- Export produces a valid backup.
+- Import restores the backup.
+- The layout works on desktop and mobile.
+- There are no dead buttons or decorative controls pretending to work.
+- There are no empty placeholder pages presented as complete content.
+
+Do not sacrifice functionality for visual appearance.
+
+---
+
+# FINAL INSTRUCTION
+
+Build the website as a genuine, usable learning platform.
+
+Think carefully about the curriculum structure, the educational dependencies, the data model, and the user experience.
+
+The objective is not to make the website look impressive while containing superficial information.
+
+The objective is to create a platform that I can realistically use over several months to progress from having no RAG experience to independently engineering production-grade Agentic AI and RAG systems.
+
+Start implementing the complete first version now.

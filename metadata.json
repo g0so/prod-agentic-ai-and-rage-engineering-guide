@@ -1,0 +1,6 @@
+{
+  "name": "DeepAgentic — Production Agentic AI & RAG Engineering Curriculum",
+  "description": "A structured, first-principles engineering curriculum and personal learning workspace for mastering Production Agentic AI and Retrieval-Augmented Generation (RAG).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
